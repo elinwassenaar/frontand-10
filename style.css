@@ -1,3 +1,80 @@
-/*Helvetiva*/
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: border-box; }
 
 
+body {
+    background-color: #0093d0;
+    font-family: 'Helvetica Neue';
+    font-size: 16px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 80rem) 1fr;
+    grid-template-areas: 
+        ". navigation ."
+        ". intro ."
+        ". programma ."
+}
+
+h2 {
+    color: white;
+    font-size: 15em;
+    font-weight: bold;
+    letter-spacing: -.04em;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+.main {
+    
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    /* class toekennen aan de list items in html om twee links een rechts te doen */
+}
+
+
+/*events
+flex container maken daarin weer div met class event-content
+
+dan de container:
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+height: 25rem;
+
+de content die dan links onderin staat:
+
+margin: 4rem;
+max-width: 64rem;
+
+
+
+*/
