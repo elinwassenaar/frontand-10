@@ -20,17 +20,30 @@ body {
 
 h2 {
     color: white;
+    letter-spacing: -0.04em;
+}
+
+.title {
     font-size: 15em;
-    font-weight: bold;
-    letter-spacing: -.04em;
+}
+
+.subtitle {
+    font-size: 11em;
 }
 
 h3 {
     color: white;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 h4 {
     color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -43,10 +56,6 @@ a {
 
 a:visited {
     color: white;
-}
-
-.main {
-    
 }
 
 .navigation {
@@ -63,9 +72,12 @@ a:visited {
 }
 
 .intro {
+    grid-area: intro;
+    margin-top: -19rem;
+    z-index: -1;
     display: grid;
     grid-template-columns: repeat(3, minmax(11rem, 20rem));
-    grid-template-rows: repeat(3, minmax(11rem, 20rem));
+    grid-template-rows: 305px 244px 305px;
     grid-template-areas:
     "big big normal1"
     "big big long"
@@ -73,9 +85,10 @@ a:visited {
 }
 
 .background-image {
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     position: relative;
+    top: 0;
 }
 
 .event{
@@ -84,6 +97,7 @@ a:visited {
     justify-content: flex-end;
     /*height: x rem*/
     /* position: relative; */
+    overflow: hidden;
 }
 
 /* .event img {
@@ -93,8 +107,9 @@ a:visited {
 
 .event-content {
     position: absolute;
-    margin: 4rem;
-    max-width: 40rem;
+    padding-bottom: 1.5rem;
+    margin-left: 2rem;
+    max-width: 16rem;
 }
 
 .event-normal1 {
@@ -113,13 +128,16 @@ a:visited {
     grid-area: big;
     grid-row: span 2;
     grid-column: span 2;
+    
 } 
 
 .event-long {
     grid-area: long;
-
 }
 
+.programma {
+    grid-area: programma;
+}
 
 /*events
 flex container maken daarin weer div met class event-content
