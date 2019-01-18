@@ -10,12 +10,9 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 80rem) 1fr;
     grid-template-areas: 
-        ". navigation ."
-        ". intro ."
-        ". programma ."
+        ". header ."
+        ". main ."
 }
-
-
 /* bloksgewijs je html en css opbouwen */
 
 h2 {
@@ -58,21 +55,34 @@ a:visited {
     color: white;
 }
 
-.navigation {
-    grid-area: navigation;
+.header {
+    grid-area: header;
 }
 
 .navigation ul{
     list-style: none;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    padding: 0;
+}
 
-    /* class toekennen aan de list items in html om twee links een rechts te doen */
+.nav-left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    flex-grow: 18;
+    justify-content: flex-end;
+}
+
+.main {
+    grid-area: main;
 }
 
 .intro {
-    grid-area: intro;
     margin-top: -19rem;
     z-index: -1;
     display: grid;
@@ -95,15 +105,8 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /*height: x rem*/
-    /* position: relative; */
     overflow: hidden;
 }
-
-/* .event img {
-    position: absolute;
-    top: 0;
-} */
 
 .event-content {
     position: absolute;
@@ -143,23 +146,16 @@ a:visited {
 flex container maken daarin weer div met class event-content
 
 dan de container:
-
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
 height: 25rem;
 
 de content die dan links onderin staat:
-
 margin: 4rem;
 max-width: 64rem;
-
-
-
 */
 
 /* let op bij indelen events uit intro: 
-
 grid-template-columns: repeat(3, 1fr);
-
 */
