@@ -121,6 +121,14 @@ a:visited {
     overflow: hidden;
 }
 
+.date {
+    display: none;
+}
+
+.event:hover .date {
+    display: block;
+}
+
 /* Kan ook met een grid in een grid: één kolom en één rij waarin plaatje staat
 en ook de content, en dan positioneren met end e.d. */
 
@@ -130,6 +138,8 @@ en ook de content, en dan positioneren met end e.d. */
     margin-left: 2rem;
     max-width: 16rem;
 }
+
+ 
 
 .event-normal1 {
     grid-area: normal1;
