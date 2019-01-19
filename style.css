@@ -21,10 +21,12 @@ h2 {
 }
 
 .title {
+    color: white;
     font-size: 15em;
 }
 
 .subtitle {
+    color: white;
     font-size: 11em;
 }
 
