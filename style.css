@@ -8,16 +8,24 @@ body {
     font-size: 16px;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 80rem) 1fr;
+    grid-template-columns: 1fr minmax(auto, 60rem) 1fr;
     grid-template-areas: 
         ". header ."
         ". main ."
 }
-/* bloksgewijs je html en css opbouwen */
+
+img {
+    max-width: 100%;
+}
+
+/* breedte middelste kolom moet overeenkomen met breedte van grid dat ik voor
+intro gebruikt heb */
 
 h2 {
     color: white;
     letter-spacing: -0.04em;
+    padding: 0;
+    margin: 0 0 12rem 0;
 }
 
 .title {
@@ -67,6 +75,7 @@ a:visited {
     display: flex;
     flex-flow: row nowrap;
     padding: 0;
+    font-size: 1.2rem;
 }
 
 .nav-left {
@@ -90,7 +99,7 @@ a:visited {
     z-index: -1;
     display: grid;
     grid-template-columns: repeat(3, minmax(11rem, 20rem));
-    grid-template-rows: 305px 244px 305px;
+    grid-template-rows: repeat(3, 20rem);
     grid-template-areas:
     "big big normal1"
     "big big long"
@@ -100,8 +109,8 @@ a:visited {
 .background-image {
     z-index: -2;
     width: 100%;
-    position: relative;
-    top: 0;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .event{
@@ -110,6 +119,9 @@ a:visited {
     justify-content: flex-end;
     overflow: hidden;
 }
+
+/* Kan ook met een grid in een grid: één kolom en één rij waarin plaatje staat
+en ook de content, en dan positioneren met end e.d. */
 
 .event-content {
     position: absolute;
